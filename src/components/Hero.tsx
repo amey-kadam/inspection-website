@@ -51,18 +51,12 @@ export function Hero() {
               <span className="text-sm leading-tight text-muted">
                 Trusted by
                 <br />
-                1,500+ homeowners
+                100+ homeowners
               </span>
             </div>
             <div className="hidden h-9 w-px bg-line sm:block" />
             <div className="flex items-center gap-2 text-sm font-medium text-body">
               <Dot /> Report ready in 24 hours
-            </div>
-            <div className="flex items-center gap-2 text-sm font-medium text-body">
-              <Dot /> Certified
-            </div>
-            <div className="flex items-center gap-2 text-sm font-medium text-body">
-              <Dot /> ISO 9001
             </div>
           </div>
         </div>
