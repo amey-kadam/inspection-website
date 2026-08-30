@@ -29,7 +29,7 @@ export function Header() {
               <path d="m8.5 12.2 2.5 2.5 4.5-5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </span>
-          PrimeInspect
+          GharInspect
         </a>
 
         <nav className="hidden items-center gap-9 md:flex" aria-label="Primary">

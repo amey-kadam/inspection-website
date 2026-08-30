@@ -13,7 +13,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
           <div className="lg:col-span-1">
-            <p className="text-lg font-extrabold tracking-tight text-white">PrimeInspect</p>
+            <p className="text-lg font-extrabold tracking-tight text-white">GharInspect</p>
             <p className="mt-3 text-sm leading-relaxed">
               Inspect Before You Invest. India's most trusted premium home inspection service for
               new-possession and resale homes.
@@ -43,8 +43,8 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:info@primeinspect.in" className="transition hover:text-brass-light">
-                  info@primeinspect.in
+                <a href="mailto:support@gharinspect.in" className="transition hover:text-brass-light">
+                  support@gharinspect.in
                 </a>
               </li>
             </ul>
@@ -52,7 +52,7 @@ export function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col gap-2 border-t border-white/10 py-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 PrimeInspect Home Services. All rights reserved.</p>
+          <p>© 2026 GharInspect Home Services. All rights reserved.</p>
           <p>Crafted for Indian homebuyers.</p>
         </div>
       </div>

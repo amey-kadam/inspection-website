@@ -12,7 +12,7 @@ export function SampleReportModal({ open, onClose }: { open: boolean; onClose: (
       <div className="rounded-xl border border-line bg-white p-5">
         <div className="flex items-center justify-between border-b border-line pb-4">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-brass-dark">PrimeInspect</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-brass-dark">GharInspect</p>
             <p className="text-lg font-bold text-ink">Green Heights · 3 BHK</p>
           </div>
           <span className="rounded-full bg-ink px-3 py-1 text-xs font-semibold text-white">PDF Report</span>

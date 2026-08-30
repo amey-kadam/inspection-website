@@ -6,7 +6,7 @@ export function WhatsAppButton() {
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Chat with PrimeInspect on WhatsApp"
+      aria-label="Chat with GharInspect on WhatsApp"
       className="fixed bottom-5 right-5 z-30 flex h-14 w-14 items-center justify-center rounded-full bg-emerald-600 text-white shadow-xl transition hover:bg-emerald-700 active:scale-95"
     >
       <svg viewBox="0 0 24 24" className="h-7 w-7" fill="currentColor" aria-hidden="true">
