@@ -1,8 +1,8 @@
 export const stats = [
-  { value: 1500, suffix: '+', label: 'Homes Inspected' },
-  { value: 98, suffix: '%', label: 'Customer Satisfaction' },
+  { value: 250, suffix: '+', label: 'Home Spaces' },
+  { value: 100, suffix: '%', label: 'Customer Satisfaction' },
   { value: 24, suffix: ' hrs', label: 'Report Delivery' },
-  { value: 250, suffix: '+', label: 'Inspection Checkpoints' },
+  { value: 200, suffix: '+', label: 'Inspection Checkpoints' },
 ] as const
 
 export type Feature = { title: string; description: string; icon: string }
@@ -11,16 +11,6 @@ export const features: Feature[] = [
     title: 'Certified Engineers',
     description: 'Civil and structural engineers trained specifically for residential inspection standards.',
     icon: 'badge',
-  },
-  {
-    title: 'Advanced Equipment',
-    description: 'Calibrated instruments including moisture meters, plumb detectors, and lux meters.',
-    icon: 'gauge',
-  },
-  {
-    title: 'Thermal Imaging',
-    description: 'Detect hidden leaks, heat loss, and insulation defects invisible to the naked eye.',
-    icon: 'thermal',
   },
   {
     title: 'Digital Reports',
@@ -32,11 +22,6 @@ export const features: Feature[] = [
     description: 'On-site inspection completed the same day and the final report within 24 hours.',
     icon: 'clock',
   },
-  {
-    title: 'Transparent Pricing',
-    description: 'Fixed, upfront pricing with zero hidden charges across every property size.',
-    icon: 'tag',
-  },
 ]
 
 export type ProcessStep = { step: string; title: string; description: string }
@@ -46,7 +31,6 @@ export const processSteps: ProcessStep[] = [
   { step: '03', title: '200+ Quality Checks', description: 'Every room is inspected against our detailed checklist.' },
   { step: '04', title: 'Digital Inspection Report', description: 'Photo-annotated PDF delivered to your inbox within 24 hours.' },
   { step: '05', title: 'Builder Rectification Support', description: 'We help you draft the snag list and share it with your builder.' },
-  { step: '06', title: 'Re-inspection Available', description: 'Once fixes are done, we re-verify each defect before you sign off.' },
 ]
 
 export type Category = { title: string; icon: string }
@@ -61,8 +45,6 @@ export const categories: Category[] = [
   { title: 'Balcony', icon: 'balcony' },
   { title: 'Ceiling', icon: 'ceiling' },
   { title: 'Paint Quality', icon: 'paint' },
-  { title: 'Moisture Detection', icon: 'droplet' },
-  { title: 'Thermal Imaging', icon: 'thermal' },
 ]
 
 export const checklistItems: string[] = [
@@ -86,7 +68,7 @@ export const plans: Plan[] = [
   {
     id: 'starter',
     name: 'Starter',
-    price: '₹5,999',
+    price: '₹5,000',
     suitableFor: 'Suitable for 1 BHK',
     features: ['Full property inspection', '250+ checkpoints', 'Thermal imaging', 'Digital PDF report'],
     cta: 'Get Started',
@@ -94,7 +76,7 @@ export const plans: Plan[] = [
   {
     id: 'professional',
     name: 'Professional',
-    price: '₹7,999',
+    price: '₹6,000',
     suitableFor: 'Suitable for 2 BHK',
     features: ['Everything in Starter', 'Detailed snag list', 'Builder handover support', 'One free re-inspection'],
     cta: 'Get Started',
@@ -103,7 +85,7 @@ export const plans: Plan[] = [
   {
     id: 'premium',
     name: 'Premium',
-    price: '₹9,999',
+    price: '₹7,000',
     suitableFor: 'Suitable for 3+ BHK',
     features: ['Everything in Professional', 'Extended civil checks', 'Utility load testing', 'Priority scheduling'],
     cta: 'Get Started',
@@ -125,27 +107,6 @@ export const benefits: string[] = [
   'Receive professional documentation',
   'Ensure quality workmanship',
   'Save time and money in the long run',
-]
-
-export type City = { name: string }
-export const cities: City[] = [
-  { name: 'Pune' }, { name: 'Mumbai' }, { name: 'Navi Mumbai' }, { name: 'Thane' },
-  { name: 'Bangalore' }, { name: 'Hyderabad' }, { name: 'Ahmedabad' }, { name: 'Delhi NCR' },
-]
-
-export type Project = {
-  name: string
-  type: string
-  city: string
-  image: string
-}
-export const projects: Project[] = [
-  { name: 'Project Green Heights', type: '3 BHK Apartment', city: 'Pune', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80' },
-  { name: 'Skyline Residency', type: '2 BHK Apartment', city: 'Mumbai', image: 'https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&q=80' },
-  { name: 'Emerald Towers', type: '4 BHK Penthouse', city: 'Bangalore', image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=80' },
-  { name: 'Palm Residency', type: 'Villa', city: 'Hyderabad', image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=900&q=80' },
-  { name: 'Royal County', type: '3 BHK Apartment', city: 'Thane', image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=900&q=80' },
-  { name: 'Urban Habitat', type: '2 BHK Apartment', city: 'Ahmedabad', image: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=900&q=80' },
 ]
 
 export type Testimonial = { name: string; role: string; quote: string }

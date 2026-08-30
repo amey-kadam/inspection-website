@@ -8,8 +8,6 @@ import { InspectionCategories } from './components/InspectionCategories'
 import { Checklist } from './components/Checklist'
 import { Pricing } from './components/Pricing'
 import { Benefits } from './components/Benefits'
-import { ServiceAreas } from './components/ServiceAreas'
-import { Portfolio } from './components/Portfolio'
 import { Testimonials } from './components/Testimonials'
 import { FAQ } from './components/FAQ'
 import { FinalCTA } from './components/FinalCTA'
@@ -31,8 +29,6 @@ function App() {
           <Checklist />
           <Pricing />
           <Benefits />
-          <ServiceAreas />
-          <Portfolio />
           <Testimonials />
           <FAQ />
           <FinalCTA />

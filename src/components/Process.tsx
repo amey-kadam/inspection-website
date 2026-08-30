@@ -9,7 +9,7 @@ export function Process() {
         <SectionIntro
           center
           label="Our Process"
-          heading="Six steps to a worry-free handover"
+          heading="Five steps to a worry-free handover"
           description="Simple, transparent, and designed around your possession timeline."
         />
 
