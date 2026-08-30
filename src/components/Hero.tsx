@@ -1,10 +1,9 @@
 import { useState } from 'react'
-import { useBooking } from '../context/BookingContext'
+import { WHATSAPP_URL } from '../data/content'
 import { Img } from './ui/Img'
 import { SampleReportModal } from './SampleReportModal'
 
 export function Hero() {
-  const { open } = useBooking()
   const [sampleOpen, setSampleOpen] = useState(false)
 
   return (
@@ -30,12 +29,14 @@ export function Hero() {
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <button
-              onClick={() => open()}
-              className="rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-ink-2 active:scale-[0.98]"
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-ink px-7 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-ink-2 active:scale-[0.98]"
             >
               Book Inspection
-            </button>
+            </a>
             <button
               onClick={() => setSampleOpen(true)}
               className="rounded-full border border-line bg-white px-7 py-3.5 text-sm font-semibold text-ink transition hover:border-ink"

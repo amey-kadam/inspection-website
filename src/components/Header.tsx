@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useScrolled } from '../hooks/useScrolled'
-import { useBooking } from '../context/BookingContext'
+import { WHATSAPP_URL } from '../data/content'
 
 const NAV_LINKS = [
   { label: 'Services', href: '#services' },
@@ -12,7 +12,6 @@ const NAV_LINKS = [
 export function Header() {
   const scrolled = useScrolled()
   const [menuOpen, setMenuOpen] = useState(false)
-  const { open } = useBooking()
 
   return (
     <header
@@ -46,12 +45,14 @@ export function Header() {
         </nav>
 
         <div className="hidden md:block">
-          <button
-            onClick={() => open()}
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-ink-2 active:scale-[0.98]"
           >
             Book Inspection
-          </button>
+          </a>
         </div>
 
         <button
@@ -89,15 +90,15 @@ export function Header() {
                 {link.label}
               </a>
             ))}
-            <button
-              onClick={() => {
-                setMenuOpen(false)
-                open()
-              }}
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMenuOpen(false)}
               className="mt-2 w-full rounded-full bg-ink px-5 py-3 text-center text-sm font-semibold text-white"
             >
               Book Inspection
-            </button>
+            </a>
           </nav>
         </div>
       </div>

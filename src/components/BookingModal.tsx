@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { plans } from '../data/content'
+import { plans, WHATSAPP_URL } from '../data/content'
 import { useBooking } from '../context/BookingContext'
 import { Modal } from './ui/Modal'
 
@@ -34,7 +34,7 @@ export function BookingModal() {
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
             <a
-              href="https://wa.me/919876543210"
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full bg-emerald-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-emerald-700"

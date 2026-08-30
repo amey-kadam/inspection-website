@@ -7,13 +7,11 @@ const quickLinks = [
   { label: 'Terms', href: '#' },
 ]
 
-const footerCities = ['Pune', 'Mumbai', 'Bangalore', 'Hyderabad', 'Ahmedabad', 'Delhi NCR']
-
 export function Footer() {
   return (
     <footer className="bg-ink-2 pt-16 text-white/70">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
           <div className="lg:col-span-1">
             <p className="text-lg font-extrabold tracking-tight text-white">PrimeInspect</p>
             <p className="mt-3 text-sm leading-relaxed">
@@ -30,17 +28,6 @@ export function Footer() {
                   <a href={l.href} className="text-sm transition hover:text-brass-light">
                     {l.label}
                   </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-white/90">Service Areas</p>
-            <ul className="mt-4 space-y-2.5">
-              {footerCities.map((c) => (
-                <li key={c} className="text-sm">
-                  {c}
                 </li>
               ))}
             </ul>

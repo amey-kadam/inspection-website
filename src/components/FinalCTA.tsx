@@ -21,19 +21,13 @@ export function FinalCTA() {
           Book your inspection today and step into your new home with total confidence.
         </p>
 
-        <div className="mt-9 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <div className="mt-9 flex justify-center">
           <button
             onClick={() => open()}
             className="w-full rounded-full bg-brass px-7 py-3.5 text-sm font-semibold text-ink transition hover:bg-brass-light active:scale-[0.98] sm:w-auto"
           >
             Schedule Your Inspection
           </button>
-          <a
-            href="tel:+919876543210"
-            className="text-sm font-semibold text-white/80 transition hover:text-white"
-          >
-            +91 98765 43210
-          </a>
         </div>
       </Reveal>
     </section>

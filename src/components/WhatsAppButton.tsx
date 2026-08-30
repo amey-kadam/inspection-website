@@ -1,7 +1,9 @@
+import { WHATSAPP_URL } from '../data/content'
+
 export function WhatsAppButton() {
   return (
     <a
-      href="https://wa.me/919876543210"
+      href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with PrimeInspect on WhatsApp"
