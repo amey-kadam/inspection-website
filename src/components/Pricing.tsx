@@ -1,12 +1,9 @@
-import { plans } from '../data/content'
-import { useBooking } from '../context/BookingContext'
+import { plans, WHATSAPP_URL } from '../data/content'
 import { Icon } from './ui/Icon'
 import { Reveal } from './ui/Reveal'
 import { SectionIntro } from './ui/SectionIntro'
 
 export function Pricing() {
-  const { open } = useBooking()
-
   return (
     <section id="pricing" className="scroll-mt-24 bg-paper-2 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
@@ -51,16 +48,18 @@ export function Pricing() {
                   ))}
                 </ul>
 
-                <button
-                  onClick={() => open(plan.id)}
-                  className={`mt-8 w-full rounded-full px-5 py-3 text-sm font-semibold transition active:scale-[0.98] ${
+                <a
+                  href={`${WHATSAPP_URL}?text=${encodeURIComponent(`Hi, I'd like to book the ${plan.name} plan (${plan.price}).`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`mt-8 block w-full rounded-full px-5 py-3 text-center text-sm font-semibold transition active:scale-[0.98] ${
                     plan.popular
                       ? 'bg-brass text-ink hover:bg-brass-light'
                       : 'bg-ink text-white hover:bg-ink-2'
                   }`}
                 >
                   {plan.cta}
-                </button>
+                </a>
               </div>
             </Reveal>
           ))}
