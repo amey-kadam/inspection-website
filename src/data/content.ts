@@ -125,12 +125,9 @@ export const faqs: FAQItem[] = [
   { question: 'How long does an inspection take?', answer: 'Most apartments take 2–4 hours on-site depending on size and layout. Villas and larger properties may take longer, and we schedule accordingly.' },
   { question: 'Do you inspect resale properties?', answer: 'Yes. We inspect new-possession homes as well as resale apartments, villas, and independent houses, adjusting our checklist for the property’s age and usage history.' },
   { question: 'Will builders accept the report?', answer: 'Our reports are structured, photo-documented, and reference measurable standards, which builders across India routinely accept as the basis for rectification requests.' },
-  { question: 'What equipment do you use?', answer: 'We use calibrated moisture meters, thermal imaging cameras, plumb and level detectors, lux meters, socket testers, and other professional-grade instruments.' },
   { question: 'How soon is the report delivered?', answer: 'Your digital inspection report is delivered to your inbox within 24 hours of the on-site visit.' },
-  { question: 'Is thermal imaging included?', answer: 'Yes, thermal imaging is included in every plan to detect hidden leaks, heat loss, and insulation defects that are invisible to the naked eye.' },
-  { question: 'Do you provide re-inspection?', answer: 'Yes. Our Professional plan and above include a free re-inspection once your builder completes the rectification work, and re-inspections can also be booked separately.' },
   { question: 'Can I attend the inspection?', answer: 'Absolutely — we encourage homeowners to walk through the property with our engineer so you can see the findings firsthand.' },
-  { question: 'How many checkpoints are covered?', answer: 'Our standard checklist covers 250+ checkpoints across civil, electrical, plumbing, and finishing categories.' },
+  { question: 'How many checkpoints are covered?', answer: 'Our standard checklist covers 200+ checkpoints across civil, electrical, plumbing, and finishing categories.' },
   { question: 'How is pricing decided?', answer: 'Pricing is fixed and based on property size (BHK configuration), with no hidden charges. Villas and commercial properties are quoted on request.' },
   { question: 'How do I book an inspection?', answer: 'You can book online through our booking form or message us directly on WhatsApp — we’ll confirm a slot within a few hours.' },
 ]
