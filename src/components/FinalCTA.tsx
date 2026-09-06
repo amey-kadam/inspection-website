@@ -1,9 +1,7 @@
-import { useBooking } from '../context/BookingContext'
+import { WHATSAPP_URL } from '../data/content'
 import { Reveal } from './ui/Reveal'
 
 export function FinalCTA() {
-  const { open } = useBooking()
-
   return (
     <section className="relative overflow-hidden bg-ink py-20 sm:py-28">
       <div
@@ -22,12 +20,14 @@ export function FinalCTA() {
         </p>
 
         <div className="mt-9 flex justify-center">
-          <button
-            onClick={() => open()}
-            className="w-full rounded-full bg-brass px-7 py-3.5 text-sm font-semibold text-ink transition hover:bg-brass-light active:scale-[0.98] sm:w-auto"
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full rounded-full bg-brass px-7 py-3.5 text-center text-sm font-semibold text-ink transition hover:bg-brass-light active:scale-[0.98] sm:w-auto"
           >
             Schedule Your Inspection
-          </button>
+          </a>
         </div>
       </Reveal>
     </section>
