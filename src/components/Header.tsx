@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { motion } from 'motion/react'
 import { useScrolled } from '../hooks/useScrolled'
 import { WHATSAPP_URL } from '../data/content'
 
@@ -45,14 +46,17 @@ export function Header() {
         </nav>
 
         <div className="hidden md:block">
-          <a
+          <motion.a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-ink-2 active:scale-[0.98]"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+            className="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white hover:bg-ink-2"
           >
             Book Inspection
-          </a>
+          </motion.a>
         </div>
 
         <button

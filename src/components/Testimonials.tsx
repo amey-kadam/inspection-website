@@ -50,7 +50,7 @@ export function Testimonials() {
               delay={(i % 3) * 80}
               className="w-[85%] shrink-0 snap-start sm:w-[46%] lg:w-[31.5%]"
             >
-              <div className="flex h-full flex-col rounded-2xl border border-line bg-white p-7">
+              <div className="flex h-full flex-col rounded-2xl border border-line bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-ink/10">
                 <span className="text-brass">
                   <Icon name="quote" className="h-7 w-7" />
                 </span>

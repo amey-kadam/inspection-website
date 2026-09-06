@@ -39,8 +39,19 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
+  }
+  /* Lenis owns smooth scrolling; native scroll-behavior would fight it.
+     With reduced motion Lenis is off and anchors jump instantly, as intended. */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
   }
   body {
     background: var(--color-paper);

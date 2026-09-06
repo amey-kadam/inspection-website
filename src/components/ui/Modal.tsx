@@ -1,4 +1,5 @@
 import { useEffect, useRef, type ReactNode } from 'react'
+import { lockScroll } from '../../hooks/useSmoothScroll'
 
 export function Modal({
   open,
@@ -23,10 +24,12 @@ export function Modal({
     document.addEventListener('keydown', onKey)
     const prevOverflow = document.body.style.overflow
     document.body.style.overflow = 'hidden'
+    lockScroll(true)
     panelRef.current?.querySelector<HTMLElement>('input, button, textarea, select')?.focus()
     return () => {
       document.removeEventListener('keydown', onKey)
       document.body.style.overflow = prevOverflow
+      lockScroll(false)
     }
   }, [open, onClose])
 
@@ -41,6 +44,7 @@ export function Modal({
       />
       <div
         ref={panelRef}
+        data-lenis-prevent
         role="dialog"
         aria-modal="true"
         aria-labelledby="modal-title"

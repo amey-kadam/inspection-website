@@ -18,7 +18,7 @@ export function Pricing() {
           {plans.map((plan, i) => (
             <Reveal key={plan.id} delay={i * 80}>
               <div
-                className={`flex h-full flex-col rounded-2xl p-7 ${
+                className={`flex h-full flex-col rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-ink/10 ${
                   plan.popular
                     ? 'relative border border-ink bg-ink text-white shadow-xl'
                     : 'border border-line bg-white'

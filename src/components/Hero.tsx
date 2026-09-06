@@ -1,7 +1,18 @@
 import { useState } from 'react'
+import { motion, type Variants } from 'motion/react'
 import { WHATSAPP_URL } from '../data/content'
 import { Img } from './ui/Img'
 import { SampleReportModal } from './SampleReportModal'
+
+const container: Variants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.09, delayChildren: 0.08 } },
+}
+
+const item: Variants = {
+  hidden: { opacity: 0, y: 22 },
+  show: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 90, damping: 18, mass: 0.9 } },
+}
 
 export function Hero() {
   const [sampleOpen, setSampleOpen] = useState(false)
@@ -13,39 +24,54 @@ export function Hero() {
         aria-hidden="true"
       />
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:gap-10">
-        <div className="animate-fade-up">
-          <span className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brass-dark">
+        <motion.div variants={container} initial="hidden" animate="show">
+          <motion.span
+            variants={item}
+            className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brass-dark"
+          >
             Inspect Before You Invest
-          </span>
+          </motion.span>
 
-          <h1 className="mt-6 text-4xl font-extrabold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[3.4rem]">
+          <motion.h1
+            variants={item}
+            className="mt-6 text-4xl font-extrabold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[3.4rem]"
+          >
             Professional Home Inspection Services
-          </h1>
+          </motion.h1>
 
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-body">
+          <motion.p variants={item} className="mt-6 max-w-xl text-lg leading-relaxed text-body">
             Get complete peace of mind before taking possession of your new home. Our
             certified engineers inspect every corner of your property using
             professional equipment and provide a detailed digital inspection report.
-          </p>
+          </motion.p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <a
+          <motion.div variants={item} className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <motion.a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-ink px-7 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-ink-2 active:scale-[0.98]"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+              className="rounded-full bg-ink px-7 py-3.5 text-center text-sm font-semibold text-white hover:bg-ink-2"
             >
               Book Inspection
-            </a>
-            <button
+            </motion.a>
+            <motion.button
               onClick={() => setSampleOpen(true)}
-              className="rounded-full border border-line bg-white px-7 py-3.5 text-sm font-semibold text-ink transition hover:border-ink"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+              className="rounded-full border border-line bg-white px-7 py-3.5 text-sm font-semibold text-ink hover:border-ink"
             >
               View Sample Report
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
 
-          <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4 border-t border-line pt-7">
+          <motion.div
+            variants={item}
+            className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4 border-t border-line pt-7"
+          >
             <div className="flex items-center gap-2.5">
               <span className="text-2xl font-extrabold text-ink">4.9/5</span>
               <span className="text-sm leading-tight text-muted">
@@ -58,10 +84,15 @@ export function Hero() {
             <div className="flex items-center gap-2 text-sm font-medium text-body">
               <Dot /> Report ready in 24 hours
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        <div className="relative animate-fade-in [animation-delay:150ms]">
+        <motion.div
+          className="relative"
+          initial={{ opacity: 0, scale: 0.96, y: 16 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ type: 'spring', stiffness: 60, damping: 18, delay: 0.15 }}
+        >
           <div className="overflow-hidden rounded-3xl border border-line/60 shadow-2xl shadow-ink/10">
             <Img
               src="https://images.unsplash.com/photo-1621891333266-0e9402242154?w=1200&q=80&auto=format&fit=crop"
@@ -69,7 +100,12 @@ export function Hero() {
               className="aspect-[4/5] w-full object-cover sm:aspect-[4/4.4]"
             />
           </div>
-          <div className="absolute -bottom-6 -left-6 hidden w-56 rounded-2xl border border-line bg-white p-4 shadow-xl sm:block">
+          <motion.div
+            className="absolute -bottom-6 -left-6 hidden w-56 rounded-2xl border border-line bg-white p-4 shadow-xl sm:block"
+            initial={{ opacity: 0, y: 14, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 0.6 }}
+          >
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brass/15 text-brass-dark">
                 <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2}>
@@ -81,8 +117,8 @@ export function Hero() {
                 <p className="text-xs text-muted">completed on-site</p>
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
 
       <SampleReportModal open={sampleOpen} onClose={() => setSampleOpen(false)} />

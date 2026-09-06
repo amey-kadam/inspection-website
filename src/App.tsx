@@ -1,3 +1,5 @@
+import { MotionConfig } from 'motion/react'
+import { useSmoothScroll } from './hooks/useSmoothScroll'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { Stats } from './components/Stats'
@@ -14,25 +16,29 @@ import { Footer } from './components/Footer'
 import { WhatsAppButton } from './components/WhatsAppButton'
 
 function App() {
+  useSmoothScroll()
+
   return (
-    <div className="overflow-x-hidden">
-      <Header />
-      <main>
-        <Hero />
-        <Stats />
-        <WhyChooseUs />
-        <Process />
-        <InspectionCategories />
-        <Checklist />
-        <Pricing />
-        <Benefits />
-        <Testimonials />
-        <FAQ />
-        <FinalCTA />
-      </main>
-      <Footer />
-      <WhatsAppButton />
-    </div>
+    <MotionConfig reducedMotion="user">
+      <div className="overflow-x-hidden">
+        <Header />
+        <main>
+          <Hero />
+          <Stats />
+          <WhyChooseUs />
+          <Process />
+          <InspectionCategories />
+          <Checklist />
+          <Pricing />
+          <Benefits />
+          <Testimonials />
+          <FAQ />
+          <FinalCTA />
+        </main>
+        <Footer />
+        <WhatsAppButton />
+      </div>
+    </MotionConfig>
   )
 }
 

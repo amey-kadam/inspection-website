@@ -1,3 +1,4 @@
+import { motion } from 'motion/react'
 import { WHATSAPP_URL } from '../data/content'
 import { Reveal } from './ui/Reveal'
 
@@ -20,14 +21,17 @@ export function FinalCTA() {
         </p>
 
         <div className="mt-9 flex justify-center">
-          <a
+          <motion.a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full rounded-full bg-brass px-7 py-3.5 text-center text-sm font-semibold text-ink transition hover:bg-brass-light active:scale-[0.98] sm:w-auto"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+            className="w-full rounded-full bg-brass px-7 py-3.5 text-center text-sm font-semibold text-ink hover:bg-brass-light sm:w-auto"
           >
             Schedule Your Inspection
-          </a>
+          </motion.a>
         </div>
       </Reveal>
     </section>
