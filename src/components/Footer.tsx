@@ -22,10 +22,10 @@ export function Footer() {
 
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-white/90">Quick Links</p>
-            <ul className="mt-4 space-y-2.5">
+            <ul className="mt-4 space-y-1">
               {quickLinks.map((l) => (
                 <li key={l.label}>
-                  <a href={l.href} className="text-sm transition hover:text-brass-light">
+                  <a href={l.href} className="inline-block py-2 text-sm transition hover:text-brass-light">
                     {l.label}
                   </a>
                 </li>
@@ -35,15 +35,15 @@ export function Footer() {
 
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-white/90">Contact</p>
-            <ul className="mt-4 space-y-3 text-sm">
+            <ul className="mt-4 space-y-2 text-sm">
               <li>101 Business Park, MG Road, Pune, Maharashtra - 411001</li>
               <li>
-                <a href="tel:+919876543210" className="transition hover:text-brass-light">
+                <a href="tel:+919876543210" className="inline-block py-2 transition hover:text-brass-light">
                   +91 98765 43210
                 </a>
               </li>
               <li>
-                <a href="mailto:support@gharinspect.in" className="transition hover:text-brass-light">
+                <a href="mailto:support@gharinspect.in" className="inline-block py-2 transition hover:text-brass-light">
                   support@gharinspect.in
                 </a>
               </li>

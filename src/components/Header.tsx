@@ -60,7 +60,7 @@ export function Header() {
         </div>
 
         <button
-          className="flex h-10 w-10 items-center justify-center rounded-lg text-ink md:hidden"
+          className="-mr-1 flex h-11 w-11 items-center justify-center rounded-lg text-ink md:hidden"
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
           aria-controls="mobile-nav"
