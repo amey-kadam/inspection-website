@@ -1,5 +1,4 @@
-// TODO: placeholder number — swap for the real WhatsApp business number
-export const WHATSAPP_URL = 'https://wa.me/919876543210'
+export const WHATSAPP_URL = 'https://wa.me/919021907313'
 
 export const stats = [
   { value: 250, suffix: '+', label: 'Home Spaces' },

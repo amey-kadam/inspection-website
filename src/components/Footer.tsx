@@ -38,8 +38,8 @@ export function Footer() {
             <ul className="mt-4 space-y-2 text-sm">
               <li>101 Business Park, MG Road, Pune, Maharashtra - 411001</li>
               <li>
-                <a href="tel:+919876543210" className="inline-block py-2 transition hover:text-brass-light">
-                  +91 98765 43210
+                <a href="tel:+919021907313" className="inline-block py-2 transition hover:text-brass-light">
+                  +91 90219 07313
                 </a>
               </li>
               <li>
