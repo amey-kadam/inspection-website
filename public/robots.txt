@@ -1,0 +1,7 @@
+# https://www.gharinspect.in/
+# Assets stay crawlable: Google needs the JS and CSS to render this page at all.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.gharinspect.in/sitemap.xml
