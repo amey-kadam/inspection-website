@@ -102,32 +102,6 @@ export const plans: Plan[] = [
   },
 ]
 
-// TODO: placeholder projects — replace `project`, `city`, `config` and `defects`
-// with real inspections. `x`/`y` are percentage positions on the hero map and
-// are decorative, not geographic. `mobile: false` hides a pin on small screens.
-export const inspections = [
-  { id: 'p1', project: 'Lodha Amara', city: 'Thane', config: '3 BHK', defects: 14, x: 22, y: 32, align: 'right', mobile: true },
-  { id: 'p2', project: 'Godrej Emerald', city: 'Thane', config: '2 BHK', defects: 9, x: 14, y: 68, align: 'right', mobile: false },
-  {
-    id: 'p3',
-    project: 'Kalpataru Vienta',
-    city: 'Mumbai',
-    config: '3 BHK',
-    defects: 21,
-    x: 50,
-    y: 26,
-    align: 'center',
-    mobile: true,
-    image:
-      'https://images.unsplash.com/photo-1621891333266-0e9402242154?w=640&q=80&auto=format&fit=crop',
-  },
-  { id: 'p4', project: 'Kohinoor Sapphire', city: 'Pune', config: '2 BHK', defects: 11, x: 38, y: 66, align: 'center', mobile: true },
-  { id: 'p5', project: 'Prestige Lakeside', city: 'Bangalore', config: '4 BHK', defects: 17, x: 70, y: 58, align: 'left', mobile: true },
-  { id: 'p6', project: 'My Home Bhooja', city: 'Hyderabad', config: '3 BHK', defects: 12, x: 82, y: 30, align: 'left', mobile: false },
-] as const
-
-export const FEATURED_INSPECTION = 'p3'
-
 export const benefits: string[] = [
   'Avoid expensive repairs down the line',
   'Identify hidden defects before possession',
