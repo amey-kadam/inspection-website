@@ -131,7 +131,7 @@ export const faqs: FAQItem[] = [
   { question: 'Can I attend the inspection?', answer: 'Absolutely — we encourage homeowners to walk through the property with our engineer so you can see the findings firsthand.' },
   { question: 'How many checkpoints are covered?', answer: 'Our standard checklist covers 200+ checkpoints across civil, electrical, plumbing, and finishing categories.' },
   { question: 'How is pricing decided?', answer: 'Pricing is fixed and based on property size (BHK configuration), with no hidden charges. Villas and commercial properties are quoted on request.' },
-  { question: 'How do I book an inspection?', answer: 'You can book online through our booking form or message us directly on WhatsApp — we’ll confirm a slot within a few hours.' },
+  { question: 'How do I book an inspection?', answer: 'Message us on WhatsApp using any of the booking buttons on this page, and tell us your property location and preferred date. We’ll confirm a slot within a few hours. You can also reach us by phone or email.' },
 ]
 
 export const iconPaths: Record<string, string> = {
