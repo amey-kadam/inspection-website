@@ -11,7 +11,7 @@ export function Checklist() {
           center
           light
           label="Inspection Checklist"
-          heading="250+ checkpoints. Zero shortcuts."
+          heading="200+ checkpoints. Zero shortcuts."
           description="Our engineers run through a rigorously refined checklist so nothing slips through — here's a snapshot of what's covered."
         />
 

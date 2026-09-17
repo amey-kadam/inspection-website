@@ -103,7 +103,7 @@ export function Hero() {
                 </svg>
               </div>
               <div>
-                <p className="text-sm font-bold text-ink">250+ checks</p>
+                <p className="text-sm font-bold text-ink">200+ checks</p>
                 <p className="text-xs text-muted">completed on-site</p>
               </div>
             </div>

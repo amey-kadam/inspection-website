@@ -1,7 +1,7 @@
 export const WHATSAPP_URL = 'https://wa.me/919021907313'
 
 export const stats = [
-  { value: 250, suffix: '+', label: 'Home Spaces' },
+  { value: 200, suffix: '+', label: 'Home Spaces' },
   { value: 100, suffix: '%', label: 'Customer Satisfaction' },
   { value: 24, suffix: ' hrs', label: 'Report Delivery' },
   { value: 200, suffix: '+', label: 'Inspection Checkpoints' },
@@ -72,7 +72,7 @@ export const plans: Plan[] = [
     name: 'Starter',
     price: '₹5,000',
     suitableFor: 'Suitable for 1 BHK',
-    features: ['Full property inspection', '250+ checkpoints', 'Thermal imaging', 'Digital PDF report'],
+    features: ['Full property inspection', '200+ checkpoints', 'Thermal imaging', 'Digital PDF report'],
     cta: 'Get Started',
   },
   {

@@ -32,7 +32,7 @@ export function SampleReportModal({ open, onClose }: { open: boolean; onClose: (
           ))}
         </ul>
         <p className="mt-4 text-xs text-muted">
-          This is a preview snapshot. Your full report includes photo annotations across all 250+ checkpoints.
+          This is a preview snapshot. Your full report includes photo annotations across all 200+ checkpoints.
         </p>
       </div>
     </Modal>

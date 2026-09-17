@@ -1,7 +1,7 @@
 # GharInspect
 
 > Professional home inspection for new-possession and resale property in India.
-> Certified civil and structural engineers, 250+ checkpoints, thermal imaging,
+> Certified civil and structural engineers, 200+ checkpoints, thermal imaging,
 > and a photo-documented digital report within 24 hours.
 
 ## Services
