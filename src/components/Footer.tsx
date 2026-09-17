@@ -3,8 +3,8 @@ const quickLinks = [
   { label: 'Process', href: '#process' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'FAQs', href: '#faqs' },
-  { label: 'Privacy Policy', href: '#' },
-  { label: 'Terms', href: '#' },
+  { label: 'Privacy Policy', href: '/privacy' },
+  { label: 'Terms', href: '/terms' },
 ]
 
 export function Footer() {

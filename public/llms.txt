@@ -23,6 +23,10 @@ Pune, Mumbai, Thane, Bengaluru, Hyderabad and Delhi NCR.
 - Email: support@gharinspect.in
 - Site: https://www.gharinspect.in/
 
+## Policies
+- Privacy Policy: https://www.gharinspect.in/privacy
+- Terms of Service: https://www.gharinspect.in/terms
+
 ## Notes
 Structured data for the business, services, pricing and FAQs is published as
 JSON-LD in the page head. Answers to common questions are at
