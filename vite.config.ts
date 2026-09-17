@@ -52,10 +52,10 @@ function structuredData() {
         priceRange: '₹₹',
         address: {
           '@type': 'PostalAddress',
-          streetAddress: '101 Business Park, MG Road',
+          streetAddress: 'Chinchwad',
           addressLocality: 'Pune',
           addressRegion: 'Maharashtra',
-          postalCode: '411001',
+          postalCode: '411033',
           addressCountry: 'IN',
         },
         areaServed: AREA_SERVED.map((name) => ({ '@type': 'City', name })),

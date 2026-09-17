@@ -21,7 +21,7 @@ export type LegalDoc = {
 
 const CONTACT = 'support@gharinspect.in'
 const PHONE = '+91 90219 07313'
-const ADDRESS = '101 Business Park, MG Road, Pune, Maharashtra 411001'
+const ADDRESS = 'Chinchwad 411033, Pune'
 const UPDATED = '17 September 2026'
 
 export const privacy: LegalDoc = {
