@@ -12,7 +12,7 @@ export function Hero() {
   const [sampleOpen, setSampleOpen] = useState(false)
 
   return (
-    <section id="top" className="relative flex min-h-[78svh] flex-col overflow-hidden bg-paper sm:min-h-[90svh]">
+    <section id="top" className="relative flex min-h-[88svh] flex-col overflow-hidden bg-paper sm:min-h-[100svh]">
       <Img
         src="https://images.pexels.com/photos/8146330/pexels-photo-8146330.jpeg?auto=compress&cs=tinysrgb&w=2000"
         width={2000}
