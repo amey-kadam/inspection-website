@@ -7,7 +7,7 @@ export function Process() {
     <section id="process" className="scroll-mt-24 bg-paper-2 py-20 sm:py-28">
       <div className="mx-auto max-w-5xl px-5 sm:px-8">
         <SectionHead
-          index={2}
+          index={3}
           label="Our process"
           meta={`${processSteps.length} steps`}
           heading="Five steps to a worry-free handover"

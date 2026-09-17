@@ -8,7 +8,7 @@ export function InspectionCategories() {
     <section className="bg-paper py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHead
-          index={3}
+          index={4}
           label="Coverage"
           meta={`${categories.length} areas`}
           heading="Every surface. Every system. Every detail."

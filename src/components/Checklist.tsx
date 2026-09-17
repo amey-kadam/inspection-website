@@ -7,7 +7,7 @@ export function Checklist() {
     <section className="bg-ink py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHead
-          index={4}
+          index={5}
           light
           label="Inspection checklist"
           meta="200+ checkpoints"

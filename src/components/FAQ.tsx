@@ -7,7 +7,7 @@ export function FAQ() {
     <section id="faqs" className="scroll-mt-24 bg-ink py-20 sm:py-28">
       <div className="mx-auto max-w-4xl px-5 sm:px-8">
         <SectionHead
-          index={8}
+          index={9}
           light
           label="FAQ"
           meta={`${faqs.length} questions`}

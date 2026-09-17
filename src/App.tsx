@@ -2,6 +2,7 @@ import { MotionConfig } from 'motion/react'
 import { useSmoothScroll } from './hooks/useSmoothScroll'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
+import { ReportPreview } from './components/ReportPreview'
 import { Stats } from './components/Stats'
 import { WhyChooseUs } from './components/WhyChooseUs'
 import { Process } from './components/Process'
@@ -24,6 +25,7 @@ function App() {
         <Header />
         <main>
           <Hero />
+          <ReportPreview />
           <Stats />
           <WhyChooseUs />
           <Process />

@@ -8,7 +8,7 @@ export function Pricing() {
     <section id="pricing" className="scroll-mt-24 bg-paper-2 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHead
-          index={5}
+          index={6}
           label="Pricing"
           meta={`${plans.length} plans`}
           heading="Fixed, upfront pricing"

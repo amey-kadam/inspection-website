@@ -8,7 +8,7 @@ export function WhyChooseUs() {
     <section id="services" className="scroll-mt-24 bg-paper py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHead
-          index={1}
+          index={2}
           label="Why choose us"
           meta={`${features.length} pillars`}
           heading="Built for Indian homebuyers"

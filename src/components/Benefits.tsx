@@ -8,7 +8,7 @@ export function Benefits() {
     <section className="bg-paper py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHead
-          index={6}
+          index={7}
           label="How it helps"
           meta={`${benefits.length} outcomes`}
           heading="Buy your home with total confidence"

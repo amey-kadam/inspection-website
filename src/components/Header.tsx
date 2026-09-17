@@ -13,18 +13,29 @@ const NAV_LINKS = [
 export function Header() {
   const scrolled = useScrolled()
   const [menuOpen, setMenuOpen] = useState(false)
+  // Inverted while over the hero image; normal once scrolled or the menu opens.
+  const solid = scrolled || menuOpen
 
   return (
     <header
       className={`fixed inset-x-0 top-0 z-40 transition-all duration-300 ${
-        scrolled || menuOpen
+        solid
           ? 'border-b border-line/80 bg-paper/90 backdrop-blur-md shadow-[0_1px_0_0_rgba(0,0,0,0.02)]'
           : 'border-b border-transparent bg-transparent'
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
-        <a href="#top" className="flex items-center gap-2 text-lg font-extrabold tracking-tight text-ink">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-ink text-brass">
+        <a
+          href="#top"
+          className={`flex items-center gap-2 text-lg font-extrabold tracking-tight transition-colors ${
+            solid ? 'text-ink' : 'text-white'
+          }`}
+        >
+          <span
+            className={`flex h-8 w-8 items-center justify-center rounded-lg transition-colors ${
+              solid ? 'bg-ink text-brass' : 'bg-white/15 text-brass-light backdrop-blur-sm'
+            }`}
+          >
             <svg viewBox="0 0 24 24" className="h-4.5 w-4.5" fill="none" stroke="currentColor" strokeWidth={1.8}>
               <path d="M12 3 20 6.5v5.4c0 4.8-3 8.5-8 9.6-5-1.1-8-4.8-8-9.6V6.5L12 3Z" />
               <path d="m8.5 12.2 2.5 2.5 4.5-5" strokeLinecap="round" strokeLinejoin="round" />
@@ -38,7 +49,9 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-body transition-colors hover:text-ink"
+              className={`text-sm font-medium transition-colors ${
+                solid ? 'text-body hover:text-ink' : 'text-white/80 hover:text-white'
+              }`}
             >
               {link.label}
             </a>
@@ -53,14 +66,18 @@ export function Header() {
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.97 }}
             transition={{ type: 'spring', stiffness: 400, damping: 25 }}
-            className="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white hover:bg-ink-2"
+            className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-colors ${
+              solid ? 'bg-ink text-white hover:bg-ink-2' : 'bg-white text-ink hover:bg-brass-light'
+            }`}
           >
             Book Inspection
           </motion.a>
         </div>
 
         <button
-          className="-mr-1 flex h-11 w-11 items-center justify-center rounded-lg text-ink md:hidden"
+          className={`-mr-1 flex h-11 w-11 items-center justify-center rounded-lg transition-colors md:hidden ${
+            solid ? 'text-ink' : 'text-white'
+          }`}
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
           aria-controls="mobile-nav"

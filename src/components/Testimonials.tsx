@@ -8,7 +8,7 @@ export function Testimonials() {
     <section className="bg-paper-2 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHead
-          index={7}
+          index={8}
           label="Testimonials"
           meta={`${testimonials.length} homeowners`}
           heading="Homeowners who moved in without regrets"
