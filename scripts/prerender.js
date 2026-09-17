@@ -23,6 +23,35 @@ if (!cssHref) throw new Error('prerender: could not find the built stylesheet in
 
 const escape = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;')
 
+// WebPage + BreadcrumbList, cross-referencing the Organization and WebSite
+// nodes declared on the home page so all three URLs resolve to one entity.
+const legalSchema = (page) =>
+  JSON.stringify({
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': `${SITE}/${page.slug}#webpage`,
+        url: `${SITE}/${page.slug}`,
+        name: page.title,
+        description: page.description,
+        inLanguage: 'en-IN',
+        dateModified: page.updatedISO,
+        isPartOf: { '@id': `${SITE}/#website` },
+        publisher: { '@id': `${SITE}/#organization` },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${SITE}/${page.slug}#breadcrumb`,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+          // The final crumb is the current page, so it carries no item URL.
+          { '@type': 'ListItem', position: 2, name: page.title },
+        ],
+      },
+    ],
+  }).replace(/</g, '\\u003c')
+
 for (const page of renderLegal()) {
   const doc = `<!doctype html>
 <html lang="en-IN">
@@ -48,6 +77,7 @@ for (const page of renderLegal()) {
       rel="stylesheet"
     />
     <link rel="stylesheet" crossorigin href="${cssHref}" />
+    <script type="application/ld+json">${legalSchema(page)}</script>
   </head>
   <body>${page.html}</body>
 </html>

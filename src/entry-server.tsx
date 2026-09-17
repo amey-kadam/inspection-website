@@ -12,6 +12,7 @@ export function renderLegal() {
     slug: doc.slug,
     title: doc.title,
     description: doc.description,
+    updatedISO: doc.updatedISO,
     html: renderToString(<LegalPage doc={doc} />),
   }))
 }

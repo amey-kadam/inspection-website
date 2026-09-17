@@ -28,9 +28,9 @@ export function Hero() {
 
           <h1
             style={rise(1)}
-            className="mt-6 animate-fade-up text-4xl font-extrabold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[3.4rem]"
+            className="mt-6 animate-fade-up text-balance text-4xl font-extrabold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[3.4rem]"
           >
-            Professional Home Inspection Services
+            Professional Home Inspection Services in India
           </h1>
 
           <p style={rise(2)} className="mt-6 max-w-xl animate-fade-up text-lg leading-relaxed text-body">

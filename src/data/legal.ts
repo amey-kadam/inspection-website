@@ -15,6 +15,7 @@ export type LegalDoc = {
   title: string
   description: string
   updated: string
+  updatedISO: string
   intro: string
   sections: Section[]
 }
@@ -23,6 +24,7 @@ const CONTACT = 'support@gharinspect.in'
 const PHONE = '+91 90219 07313'
 const ADDRESS = 'Chinchwad 411033, Pune'
 const UPDATED = '17 September 2026'
+const UPDATED_ISO = '2026-09-17'
 
 export const privacy: LegalDoc = {
   slug: 'privacy',
@@ -30,6 +32,7 @@ export const privacy: LegalDoc = {
   description:
     'How GharInspect handles personal data. This website sets no cookies, runs no analytics and collects nothing directly.',
   updated: UPDATED,
+  updatedISO: UPDATED_ISO,
   intro:
     'This policy explains what GharInspect does with personal data. It covers two separate things: this website, which collects almost nothing, and the inspection service itself, which necessarily involves your contact details and your property.',
   sections: [
@@ -145,6 +148,7 @@ export const terms: LegalDoc = {
   description:
     'The terms on which GharInspect provides home inspection services, including what an inspection does and does not cover.',
   updated: UPDATED,
+  updatedISO: UPDATED_ISO,
   intro:
     'These terms apply when you engage GharInspect to inspect a property. Section 4 is the important one: it explains the limits of what any visual inspection can tell you.',
   sections: [
