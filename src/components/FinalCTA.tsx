@@ -10,9 +10,7 @@ export function FinalCTA() {
         aria-hidden="true"
       />
       <Reveal className="relative mx-auto max-w-2xl px-5 text-center sm:px-8">
-        <span className="text-xs font-semibold uppercase tracking-widest text-brass-light">
-          Limited slots this week
-        </span>
+        <span className="label text-brass-light">Limited slots this week</span>
         <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
           Ready for a Worry-Free Home Possession?
         </h2>

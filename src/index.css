@@ -2,6 +2,9 @@
 
 @theme {
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  /* The data/annotation layer. Everything measured, counted or labelled is set
+     in mono — it is what makes the page read as a report rather than a brochure. */
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   --color-ink: #0b1220;
   --color-ink-2: #131c2e;
@@ -80,6 +83,21 @@
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Figures line up in columns the way they do on a printed report. */
+.tnum {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Small uppercase mono label: section marks, units, field names. */
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .no-scrollbar::-webkit-scrollbar {

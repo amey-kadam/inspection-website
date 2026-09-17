@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import { testimonials } from '../data/content'
 import { Icon } from './ui/Icon'
 import { Reveal } from './ui/Reveal'
-import { SectionIntro } from './ui/SectionIntro'
+import { SectionHead } from './ui/Report'
 
 export function Testimonials() {
   const scrollerRef = useRef<HTMLDivElement>(null)
@@ -17,12 +17,17 @@ export function Testimonials() {
     <section className="bg-paper-2 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <SectionIntro label="Testimonials" heading="Homeowners who moved in without regrets" />
+          <SectionHead
+            index={7}
+            label="Testimonials"
+            meta={`${testimonials.length} homeowners`}
+            heading="Homeowners who moved in without regrets"
+          />
           <div className="hidden gap-2 sm:flex">
             <button
               onClick={() => scroll(-1)}
               aria-label="Previous testimonials"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-line bg-white text-ink transition hover:border-ink"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-line bg-white text-ink transition hover:border-ink"
             >
               <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={2}>
                 <path d="M15 6l-6 6 6 6" strokeLinecap="round" strokeLinejoin="round" />
@@ -31,7 +36,7 @@ export function Testimonials() {
             <button
               onClick={() => scroll(1)}
               aria-label="Next testimonials"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-line bg-white text-ink transition hover:border-ink"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-line bg-white text-ink transition hover:border-ink"
             >
               <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={2}>
                 <path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
@@ -50,14 +55,14 @@ export function Testimonials() {
               delay={(i % 3) * 80}
               className="w-[85%] shrink-0 snap-start sm:w-[46%] lg:w-[31.5%]"
             >
-              <div className="flex h-full flex-col rounded-2xl border border-line bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-ink/10">
+              <div className="flex h-full flex-col border border-line bg-white p-7 transition-colors duration-300 hover:border-ink/30">
                 <span className="text-brass">
                   <Icon name="quote" className="h-7 w-7" />
                 </span>
                 <p className="mt-4 flex-1 text-[0.95rem] leading-relaxed text-body">"{t.quote}"</p>
-                <div className="mt-6 border-t border-line pt-4">
+                <div className="mt-6 flex items-baseline justify-between gap-4 border-t border-line pt-4">
                   <p className="text-sm font-bold text-ink">{t.name}</p>
-                  <p className="text-xs text-muted">{t.role}</p>
+                  <p className="label text-muted">{t.role}</p>
                 </div>
               </div>
             </Reveal>

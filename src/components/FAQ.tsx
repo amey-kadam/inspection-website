@@ -1,29 +1,42 @@
 import { faqs } from '../data/content'
 import { Reveal } from './ui/Reveal'
-import { SectionIntro } from './ui/SectionIntro'
+import { SectionHead } from './ui/Report'
 
 export function FAQ() {
   return (
-    <section id="faqs" className="scroll-mt-24 bg-paper py-20 sm:py-28">
-      <div className="mx-auto max-w-3xl px-5 sm:px-8">
-        <SectionIntro center label="FAQ" heading="Answers to common questions" />
+    <section id="faqs" className="scroll-mt-24 bg-ink py-20 sm:py-28">
+      <div className="mx-auto max-w-4xl px-5 sm:px-8">
+        <SectionHead
+          index={8}
+          light
+          label="FAQ"
+          meta={`${faqs.length} questions`}
+          heading="Answers to common questions"
+        />
 
-        <div className="mt-12 divide-y divide-line border-y border-line">
+        <div className="mt-14">
           {faqs.map((faq, i) => (
             <Reveal key={faq.question} delay={(i % 6) * 40}>
-              <details name="faq-group" className="group">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 text-left [&::-webkit-details-marker]:hidden">
-                  <span className="text-base font-semibold text-ink">{faq.question}</span>
-                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-line text-ink transition-transform duration-300 group-open:rotate-45">
-                    <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth={2}>
-                      <path d="M12 5v14M5 12h14" strokeLinecap="round" />
-                    </svg>
+              <details name="faq-group" className="group border-t border-white/10">
+                <summary className="flex cursor-pointer list-none items-baseline gap-4 py-5 text-left [&::-webkit-details-marker]:hidden">
+                  <span className="label tnum shrink-0 text-brass">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <span className="flex-1 text-base font-semibold text-white">{faq.question}</span>
+                  <span
+                    className="label shrink-0 text-white/40 transition-transform duration-300 group-open:rotate-45"
+                    aria-hidden="true"
+                  >
+                    +
                   </span>
                 </summary>
-                <p className="-mt-1 max-w-2xl pb-5 text-sm leading-relaxed text-body">{faq.answer}</p>
+                <p className="-mt-1 max-w-2xl pb-5 pl-10 text-sm leading-relaxed text-white/70">
+                  {faq.answer}
+                </p>
               </details>
             </Reveal>
           ))}
+          <div className="border-t border-white/10" aria-hidden="true" />
         </div>
       </div>
     </section>

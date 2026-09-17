@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'motion/react'
-import { WHATSAPP_URL } from '../data/content'
-import { Img } from './ui/Img'
+import { sampleReport, WHATSAPP_URL } from '../data/content'
+import { Callout } from './ui/Report'
 import { SampleReportModal } from './SampleReportModal'
 
 // CSS-driven so the copy is visible without waiting on JS. Framer still drives
@@ -17,26 +17,23 @@ export function Hero() {
         className="pointer-events-none absolute -top-24 right-0 h-[32rem] w-[32rem] rounded-full bg-brass/10 blur-3xl"
         aria-hidden="true"
       />
-      <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:gap-10">
+      <div className="mx-auto grid max-w-7xl items-center gap-16 px-5 sm:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-12">
         <div>
-          <span
-            style={rise(0)}
-            className="inline-flex animate-fade-up items-center gap-2 rounded-full border border-line bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brass-dark"
-          >
-            Inspect Before You Invest
+          <span style={rise(0)} className="label animate-fade-up block text-brass-dark">
+            Inspect before you invest
           </span>
 
           <h1
             style={rise(1)}
-            className="mt-6 animate-fade-up text-balance text-4xl font-extrabold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[3.4rem]"
+            className="mt-6 animate-fade-up text-balance text-4xl font-extrabold leading-[1.06] tracking-tight text-ink sm:text-5xl lg:text-[3.4rem]"
           >
             Professional Home Inspection Services in India
           </h1>
 
           <p style={rise(2)} className="mt-6 max-w-xl animate-fade-up text-lg leading-relaxed text-body">
-            Get complete peace of mind before taking possession of your new home. Our
-            certified engineers inspect every corner of your property using
-            professional equipment and provide a detailed digital inspection report.
+            Get complete peace of mind before taking possession of your new home. Our certified
+            engineers inspect every corner of your property using professional equipment and
+            provide a detailed digital inspection report.
           </p>
 
           <div style={rise(3)} className="mt-9 flex animate-fade-up flex-col gap-3 sm:flex-row">
@@ -64,50 +61,23 @@ export function Hero() {
 
           <div
             style={rise(4)}
-            className="mt-10 flex animate-fade-up flex-wrap items-center gap-x-8 gap-y-4 border-t border-line pt-7"
+            className="mt-10 flex animate-fade-up flex-wrap items-center gap-x-10 gap-y-4 border-t border-line pt-7"
           >
-            <div className="flex items-center gap-2.5">
-              <span className="text-2xl font-extrabold text-ink">4.9/5</span>
-              <span className="text-sm leading-tight text-muted">
-                Trusted by
-                <br />
-                100+ homeowners
-              </span>
-            </div>
-            <div className="hidden h-9 w-px bg-line sm:block" />
-            <div className="flex items-center gap-2 text-sm font-medium text-body">
-              <Dot /> Report ready in 24 hours
-            </div>
+            <span className="flex items-baseline gap-2.5">
+              <span className="tnum text-2xl font-extrabold text-ink">4.9</span>
+              <span className="label text-muted">/ 5 · 100+ homeowners</span>
+            </span>
+            <span className="hidden h-8 w-px bg-line sm:block" aria-hidden="true" />
+            <span className="flex items-baseline gap-2.5">
+              <span className="tnum text-2xl font-extrabold text-ink">24</span>
+              <span className="label text-muted">hrs to report</span>
+            </span>
           </div>
         </div>
 
-        <div className="relative animate-fade-in [animation-delay:150ms]">
-          <div className="overflow-hidden rounded-3xl border border-line/60 shadow-2xl shadow-ink/10">
-            <Img
-              src="https://images.unsplash.com/photo-1621891333266-0e9402242154?w=1200&q=80&auto=format&fit=crop"
-              width={1200}
-              height={1500}
-              priority
-              alt="Bright, freshly finished modern apartment interior ready for a certified pre-possession inspection"
-              className="aspect-[4/5] w-full object-cover sm:aspect-[4/4.4]"
-            />
-          </div>
-          <div
-            style={{ animationDelay: '520ms' }}
-            className="absolute -bottom-6 -left-6 hidden w-56 animate-fade-up rounded-2xl border border-line bg-white p-4 shadow-xl sm:block"
-          >
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brass/15 text-brass-dark">
-                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2}>
-                  <path d="m5 13 4 4 10-10" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-              <div>
-                <p className="text-sm font-bold text-ink">200+ checks</p>
-                <p className="text-xs text-muted">completed on-site</p>
-              </div>
-            </div>
-          </div>
+        <div className="animate-fade-in [animation-delay:200ms]">
+          <ReportCard />
+          <Callout className="mt-5">Thermal imaging on every inspection</Callout>
         </div>
       </div>
 
@@ -116,6 +86,63 @@ export function Hero() {
   )
 }
 
-function Dot() {
-  return <span className="h-1.5 w-1.5 rounded-full bg-brass" aria-hidden="true" />
+/** The product, not a stock photograph: an extract of the report you receive. */
+function ReportCard() {
+  const { ref, property, date, findings, groups } = sampleReport
+
+  return (
+    <div className="rounded-2xl border border-line bg-white shadow-2xl shadow-ink/10">
+      <div className="flex items-center justify-between border-b border-line px-6 py-4">
+        <span className="label text-ink">Inspection Report</span>
+        <span className="label tnum rounded-full bg-paper-2 px-2.5 py-1 text-muted">Sample · {ref}</span>
+      </div>
+
+      <div className="flex items-center justify-between border-b border-line bg-paper/60 px-6 py-3">
+        <span className="text-sm font-semibold text-ink">{property}</span>
+        <span className="label tnum text-muted">{date}</span>
+      </div>
+
+      <div className="px-6 py-5">
+        {groups.map((group, gi) => (
+          <div key={group.label} className={gi ? 'mt-7' : ''}>
+            <div className="flex items-center gap-3">
+              <span className="label tnum text-brass-dark">{String(gi + 1).padStart(2, '0')}</span>
+              <span className="label text-muted">{group.label}</span>
+              <span className="h-px flex-1 bg-line" aria-hidden="true" />
+              <span className="label tnum text-muted">{group.checks} checks</span>
+            </div>
+
+            <div className="mt-2">
+              {group.rows.map((row) => (
+                <div
+                  key={row.name}
+                  className="flex items-center gap-3 border-b border-line/70 py-2.5 last:border-0"
+                >
+                  <span
+                    className={`label ${row.status === 'flag' ? 'text-brass-dark' : 'text-muted/60'}`}
+                    aria-hidden="true"
+                  >
+                    {row.status === 'flag' ? '!' : '✓'}
+                  </span>
+                  <span className="flex-1 text-sm text-body">{row.name}</span>
+                  <span
+                    className={`label tnum ${row.status === 'flag' ? 'font-semibold text-brass-dark' : 'text-muted'}`}
+                  >
+                    {row.value}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="flex items-center justify-between border-t border-line bg-paper/60 px-6 py-4">
+        <span className="label text-muted">
+          <span className="tnum font-semibold text-ink">{findings}</span> findings documented
+        </span>
+        <span className="label text-muted">Photo-annotated</span>
+      </div>
+    </div>
+  )
 }

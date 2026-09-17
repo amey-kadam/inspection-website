@@ -28,7 +28,7 @@ export const features: Feature[] = [
 
 export type ProcessStep = { step: string; title: string; description: string }
 export const processSteps: ProcessStep[] = [
-  { step: '01', title: 'Book Your Inspection', description: 'Reserve a slot online or on WhatsApp in under a minute.' },
+  { step: '01', title: 'Book Your Inspection', description: 'Message us on WhatsApp and reserve a slot in under a minute.' },
   { step: '02', title: 'Engineer Visits Property', description: 'A certified engineer arrives on schedule with full equipment.' },
   { step: '03', title: '200+ Quality Checks', description: 'Every room is inspected against our detailed checklist.' },
   { step: '04', title: 'Digital Inspection Report', description: 'Photo-annotated PDF delivered to your inbox within 24 hours.' },
@@ -101,6 +101,34 @@ export const plans: Plan[] = [
     cta: 'Get Started',
   },
 ]
+
+// Illustrative report extract for the hero visual. Deliberately generic — no
+// real project or society is named, and the card is labelled SAMPLE on screen.
+export const sampleReport = {
+  ref: 'GI-2481',
+  property: '3 BHK · Pune',
+  date: '24 Sep',
+  findings: 17,
+  groups: [
+    {
+      label: 'Civil & Structural',
+      checks: 42,
+      rows: [
+        { name: 'Wall plumb & level', value: 'Pass', status: 'pass' },
+        { name: 'Tile hollowness', value: '3 found', status: 'flag' },
+        { name: 'Floor slope', value: 'Pass', status: 'pass' },
+      ],
+    },
+    {
+      label: 'Electrical',
+      checks: 38,
+      rows: [
+        { name: 'Earthing continuity', value: 'Pass', status: 'pass' },
+        { name: 'Socket polarity', value: '1 found', status: 'flag' },
+      ],
+    },
+  ],
+} as const
 
 export const benefits: string[] = [
   'Avoid expensive repairs down the line',
