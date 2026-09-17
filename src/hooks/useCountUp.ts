@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react'
 
 export function useCountUp(target: number, active: boolean, duration = 1200) {
-  const [value, setValue] = useState(0)
+  // Starts at the final value so prerendered HTML — and anything that reads the
+  // page without running the animation — carries the real number. The count-up
+  // is a client-side flourish layered on top, not the source of the value.
+  const [value, setValue] = useState(target)
 
   useEffect(() => {
     if (!active) return
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setValue(target)
-      return
-    }
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
     let raf: number
     const start = performance.now()
     const tick = (now: number) => {
