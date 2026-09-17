@@ -1,0 +1,29 @@
+# GharInspect
+
+> Professional home inspection for new-possession and resale property in India.
+> Certified civil and structural engineers, 250+ checkpoints, thermal imaging,
+> and a photo-documented digital report within 24 hours.
+
+## Services
+Pre-possession and resale property inspection covering civil, electrical,
+plumbing and finishing work. Findings are photo-documented and referenced to
+measurable standards so they can be raised with a builder as a snag list.
+
+## Pricing
+- Starter — ₹5,000 — 1 BHK
+- Professional — ₹6,000 — 2 BHK
+- Premium — ₹7,000 — 3+ BHK
+- Enterprise — custom quote — villas and commercial
+
+## Coverage
+Pune, Mumbai, Thane, Bengaluru, Hyderabad and Delhi NCR.
+
+## Contact
+- WhatsApp and phone: +91 90219 07313
+- Email: support@gharinspect.in
+- Site: https://www.gharinspect.in/
+
+## Notes
+Structured data for the business, services, pricing and FAQs is published as
+JSON-LD in the page head. Answers to common questions are at
+https://www.gharinspect.in/#faqs

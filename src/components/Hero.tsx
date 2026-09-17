@@ -85,6 +85,9 @@ export function Hero() {
           <div className="overflow-hidden rounded-3xl border border-line/60 shadow-2xl shadow-ink/10">
             <Img
               src="https://images.unsplash.com/photo-1621891333266-0e9402242154?w=1200&q=80&auto=format&fit=crop"
+              width={1200}
+              height={1500}
+              priority
               alt="Bright, freshly finished modern apartment interior ready for a certified pre-possession inspection"
               className="aspect-[4/5] w-full object-cover sm:aspect-[4/4.4]"
             />

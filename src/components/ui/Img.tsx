@@ -8,16 +8,27 @@ export function Img({
   src,
   alt,
   className,
+  width,
+  height,
+  priority = false,
 }: {
   src: string
   alt: string
   className?: string
+  /** Intrinsic size. Required so the browser can reserve space and avoid layout shift. */
+  width: number
+  height: number
+  /** Set on above-the-fold images: lazy-loading an LCP candidate costs a round trip. */
+  priority?: boolean
 }) {
   return (
     <img
       src={src}
       alt={alt}
-      loading="lazy"
+      width={width}
+      height={height}
+      loading={priority ? 'eager' : 'lazy'}
+      fetchPriority={priority ? 'high' : undefined}
       decoding="async"
       className={className}
       onError={(e) => {

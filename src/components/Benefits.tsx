@@ -10,6 +10,8 @@ export function Benefits() {
         <Reveal className="overflow-hidden rounded-3xl border border-line/60">
           <Img
             src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1000&q=80&auto=format&fit=crop"
+            width={1000}
+            height={750}
             alt="Engineer reviewing an inspection report with a homeowner in a modern apartment"
             className="aspect-[4/3] w-full object-cover"
           />
