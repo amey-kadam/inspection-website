@@ -142,11 +142,8 @@ export const benefits: string[] = [
 export type Testimonial = { name: string; role: string; quote: string }
 export const testimonials: Testimonial[] = [
   { name: 'Ananya Sharma', role: 'Homebuyer, Pune', quote: "The engineers were professional, punctual, and remarkably thorough. Their report caught tile-hollowness issues we'd never have noticed on our own." },
-  { name: 'Rohit Deshmukh', role: 'Homebuyer, Mumbai', quote: 'The detailed report made it easy to raise a snag list with our builder. Every defect was documented with photos and clear notes.' },
-  { name: 'Priya Iyer', role: 'Homebuyer, Bangalore', quote: 'They found hidden moisture behind the bathroom wall — a defect that would have cost us dearly a year later. Worth every rupee.' },
-  { name: 'Vikram Menon', role: 'Homebuyer, Hyderabad', quote: 'Our builder took the GharInspect report seriously and fixed everything within two weeks. That accountability alone paid for the inspection.' },
-  { name: 'Sneha Kapoor', role: 'Homebuyer, Thane', quote: 'From the thermal imaging to the electrical safety tests, the depth of the inspection genuinely surprised us. Highly recommended.' },
-  { name: 'Arjun Rao', role: 'Homebuyer, Delhi NCR', quote: 'Peace of mind before signing the possession letter is priceless. The team explained every finding patiently. Truly a premium experience.' },
+  { name: 'Priya Iyer', role: 'Homebuyer, Pune', quote: 'They found hidden moisture behind the bathroom wall — a defect that would have cost us dearly a year later. Worth every rupee.' },
+  { name: 'Rohit Deshmukh', role: 'Homebuyer, Pune', quote: 'The detailed report made it easy to raise a snag list with our builder. Every defect was documented with photos and clear notes.' },
 ]
 
 export type FAQItem = { question: string; answer: string }

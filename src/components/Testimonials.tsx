@@ -1,70 +1,34 @@
-import { useRef } from 'react'
 import { testimonials } from '../data/content'
 import { Icon } from './ui/Icon'
 import { Reveal } from './ui/Reveal'
 import { SectionHead } from './ui/Report'
 
 export function Testimonials() {
-  const scrollerRef = useRef<HTMLDivElement>(null)
-
-  const scroll = (dir: 1 | -1) => {
-    const el = scrollerRef.current
-    if (!el) return
-    el.scrollBy({ left: dir * (el.clientWidth * 0.85), behavior: 'smooth' })
-  }
-
   return (
     <section className="bg-paper-2 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="flex flex-wrap items-end justify-between gap-6">
-          <SectionHead
-            index={7}
-            label="Testimonials"
-            meta={`${testimonials.length} homeowners`}
-            heading="Homeowners who moved in without regrets"
-          />
-          <div className="hidden gap-2 sm:flex">
-            <button
-              onClick={() => scroll(-1)}
-              aria-label="Previous testimonials"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-line bg-white text-ink transition hover:border-ink"
-            >
-              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={2}>
-                <path d="M15 6l-6 6 6 6" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </button>
-            <button
-              onClick={() => scroll(1)}
-              aria-label="Next testimonials"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-line bg-white text-ink transition hover:border-ink"
-            >
-              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={2}>
-                <path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </button>
-          </div>
-        </div>
+        <SectionHead
+          index={7}
+          label="Testimonials"
+          meta={`${testimonials.length} homeowners`}
+          heading="Homeowners who moved in without regrets"
+        />
 
-        <div
-          ref={scrollerRef}
-          className="no-scrollbar mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-pl-5 pb-2"
-        >
+        <div className="mt-14 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((t, i) => (
-            <Reveal
-              key={t.name}
-              delay={(i % 3) * 80}
-              className="w-[85%] shrink-0 snap-start sm:w-[46%] lg:w-[31.5%]"
-            >
-              <div className="flex h-full flex-col border border-line bg-white p-7 transition-colors duration-300 hover:border-ink/30">
+            <Reveal key={t.name} delay={i * 80} className="bg-line">
+              <figure className="flex h-full flex-col bg-white p-7">
                 <span className="text-brass">
-                  <Icon name="quote" className="h-7 w-7" />
+                  <Icon name="quote" className="h-6 w-6" />
                 </span>
-                <p className="mt-4 flex-1 text-[0.95rem] leading-relaxed text-body">"{t.quote}"</p>
-                <div className="mt-6 flex items-baseline justify-between gap-4 border-t border-line pt-4">
-                  <p className="text-sm font-bold text-ink">{t.name}</p>
-                  <p className="label text-muted">{t.role}</p>
-                </div>
-              </div>
+                <blockquote className="mt-5 flex-1 text-[0.95rem] leading-relaxed text-body">
+                  {t.quote}
+                </blockquote>
+                <figcaption className="mt-7 flex items-baseline justify-between gap-4 border-t border-line pt-4">
+                  <span className="text-sm font-bold text-ink">{t.name}</span>
+                  <span className="label text-muted">{t.role}</span>
+                </figcaption>
+              </figure>
             </Reveal>
           ))}
         </div>
