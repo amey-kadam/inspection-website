@@ -14,10 +14,10 @@ export function Testimonials() {
           heading="Homeowners who moved in without regrets"
         />
 
-        <div className="mt-14 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((t, i) => (
-            <Reveal key={t.name} delay={i * 80} className="bg-line">
-              <figure className="flex h-full flex-col bg-white p-7">
+            <Reveal key={t.name} delay={i * 80} className="h-full">
+              <figure className="flex h-full flex-col rounded-2xl border border-line bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-ink/15 hover:shadow-xl hover:shadow-ink/[0.08]">
                 <span className="text-brass">
                   <Icon name="quote" className="h-6 w-6" />
                 </span>

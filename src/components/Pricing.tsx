@@ -15,14 +15,16 @@ export function Pricing() {
           description="No inflated bills. No surprises. Choose the plan that matches your home."
         />
 
-        {/* A spec sheet rather than marketing cards: aligned columns, hairline
-            rules, tabular figures — priced the way a report states a finding. */}
-        <div className="mt-14 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
+        {/* Still a spec sheet inside — aligned columns, hairline rules, tabular
+            figures — but each plan is its own card. */}
+        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {plans.map((plan, i) => (
-            <Reveal key={plan.id} delay={i * 80} className="bg-line">
+            <Reveal key={plan.id} delay={i * 80} className="h-full">
               <div
-                className={`flex h-full flex-col p-7 ${
-                  plan.popular ? 'bg-ink text-white' : 'bg-white'
+                className={`flex h-full flex-col rounded-2xl border p-7 transition-all duration-300 hover:-translate-y-1 ${
+                  plan.popular
+                    ? 'border-ink bg-ink text-white shadow-xl shadow-ink/20 hover:shadow-2xl hover:shadow-ink/25'
+                    : 'border-line bg-white hover:border-ink/15 hover:shadow-xl hover:shadow-ink/[0.08]'
                 }`}
               >
                 <div className="flex items-center justify-between">
