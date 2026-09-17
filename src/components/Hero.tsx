@@ -14,12 +14,12 @@ export function Hero() {
   return (
     <section id="top" className="relative flex min-h-[92svh] flex-col overflow-hidden bg-ink">
       <Img
-        src="https://images.unsplash.com/photo-1621891333266-0e9402242154?w=2000&q=80&auto=format&fit=crop"
+        src="https://images.pexels.com/photos/8146330/pexels-photo-8146330.jpeg?auto=compress&cs=tinysrgb&w=2000"
         width={2000}
-        height={1333}
+        height={1335}
         priority
-        alt="Bright, freshly finished apartment interior ready for a certified pre-possession inspection"
-        className="absolute inset-0 h-full w-full object-cover object-[50%_35%]"
+        alt="An empty, freshly finished apartment awaiting handover, the point at which a pre-possession inspection is carried out"
+        className="absolute inset-0 h-full w-full object-cover"
       />
       {/* The source photograph is bright, so a flat wash strong enough to carry
           white type just flattens it to a dark band. Instead the scrim is
@@ -29,14 +29,14 @@ export function Hero() {
       {/* Narrow screens: copy is bottom-anchored, so the scrim runs bottom-up and
           leaves the top of the frame open. */}
       <div
-        className="absolute inset-0 bg-gradient-to-t from-ink via-ink/85 via-45% to-ink/25 sm:hidden"
+        className="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 via-45% to-ink/35 sm:hidden"
         aria-hidden="true"
       />
       {/* Wide screens: near-solid under the copy on the left, clear by the right
           third. A flat wash strong enough to carry white type over a photograph
           this bright would flatten it to a dark band. */}
       <div
-        className="absolute inset-0 hidden bg-gradient-to-r from-ink via-ink/75 to-transparent to-85% sm:block"
+        className="absolute inset-0 hidden bg-gradient-to-r from-ink via-ink/70 to-ink/30 sm:block"
         aria-hidden="true"
       />
       <div

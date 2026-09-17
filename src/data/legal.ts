@@ -51,7 +51,7 @@ export const privacy: LegalDoc = {
           list: [
             'Vercel, our hosting provider, records standard server logs including IP address, the page requested, and your browser type. These are used to serve the site and guard against abuse.',
             'Google Fonts serves the typeface used on this site. Google receives your IP address as part of that request.',
-            'Unsplash serves the two photographs on this site. Unsplash receives your IP address as part of that request.',
+            'Pexels and Unsplash serve the photographs on this site. Each receives your IP address as part of the request for the image it hosts.',
           ],
         },
         'We do not combine this information with anything else, and we cannot identify you from it.',
