@@ -72,7 +72,7 @@ export const plans: Plan[] = [
     name: 'Starter',
     price: '₹5,000',
     suitableFor: 'Suitable for 1 BHK',
-    features: ['Full property inspection', '200+ checkpoints', 'Thermal imaging', 'Digital PDF report'],
+    features: ['Full property inspection', '200+ checkpoints', 'Photo-documented findings', 'Digital PDF report'],
     cta: 'Get Started',
   },
   {
@@ -162,7 +162,6 @@ export const faqs: FAQItem[] = [
 export const iconPaths: Record<string, string> = {
   badge: 'M12 2 4 5v6c0 5 3.4 8.9 8 10 4.6-1.1 8-5 8-10V5l-8-3Zm-1.3 12.6L7.4 11.3l1.4-1.4 1.9 1.9 4.5-4.5 1.4 1.4-5.9 5.9Z',
   gauge: 'M12 3a9 9 0 0 0-7.4 14.1l1.6-1.2A7 7 0 1 1 19 12a6.9 6.9 0 0 1-1.4 4.2l1.6 1.2A9 9 0 0 0 12 3Zm.9 4.3-2.3 5.4a1.5 1.5 0 1 0 1.8 1.1l1.9-5.9-1.4-.6Z',
-  thermal: 'M13 14.8V5a1 1 0 0 0-2 0v9.8a3 3 0 1 0 2 0ZM10 5a2 2 0 1 1 4 0v8.3a4 4 0 1 1-4 0V5Z',
   report: 'M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1Zm8 1.5V8h4.5L14 3.5ZM8 13h8v1.5H8V13Zm0 3.5h8V18H8v-1.5ZM8 9.5h4V11H8V9.5Z',
   clock: 'M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm.9 5v5.4l4.2 2.5-.8 1.4-5.1-3V7Z',
   tag: 'm20.6 12.3-8-8A1 1 0 0 0 12 4H5a1 1 0 0 0-1 1v7a1 1 0 0 0 .3.7l8 8a1 1 0 0 0 1.4 0l7-7a1 1 0 0 0 0-1.4ZM8 9.5A1.5 1.5 0 1 1 9.5 8 1.5 1.5 0 0 1 8 9.5Z',

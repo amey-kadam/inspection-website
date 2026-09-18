@@ -80,7 +80,7 @@ export function ReportPreview() {
             </div>
           </div>
 
-          <Callout className="mt-5">Thermal imaging on every inspection</Callout>
+          <Callout className="mt-5">Every finding photographed and documented</Callout>
         </Reveal>
       </div>
     </section>

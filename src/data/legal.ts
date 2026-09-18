@@ -169,7 +169,7 @@ export const terms: LegalDoc = {
     {
       heading: '3. What an inspection includes',
       blocks: [
-        'Our engineer carries out a visual, non-invasive inspection of the property against our standard checklist, covering civil, electrical, plumbing and finishing work, supported by instruments such as thermal imaging and moisture meters where appropriate.',
+        'Our engineer carries out a visual, non-invasive inspection of the property against our standard checklist, covering civil, electrical, plumbing and finishing work.',
         'You receive a written report, documented with photographs, normally within 24 hours of the visit. The report describes what we observed on the day.',
       ],
     },
