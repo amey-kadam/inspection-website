@@ -80,7 +80,7 @@ export const plans: Plan[] = [
     name: 'Professional',
     price: '₹6,000',
     suitableFor: 'Suitable for 2 BHK',
-    features: ['Everything in Starter', 'Detailed snag list', 'Builder handover support', 'One free re-inspection'],
+    features: ['Everything in Starter', 'Detailed snag list', 'Builder handover support'],
     cta: 'Get Started',
     popular: true,
   },
