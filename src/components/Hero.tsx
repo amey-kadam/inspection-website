@@ -55,7 +55,7 @@ export function Hero() {
           style={rise(1)}
           className="mt-6 max-w-4xl animate-fade-up text-balance text-[2.35rem] font-extrabold leading-[1.0] sm:leading-[0.98] tracking-tight text-ink sm:text-6xl lg:text-7xl"
         >
-          Professional Home <span className="text-brass-dark">Inspection</span> Services in India
+          Professional Home <span className="text-brass-dark">Inspection</span> in Pune &amp; PCMC
         </h1>
 
         <div style={rise(2)} className="mt-10 flex animate-fade-up flex-col gap-3 sm:flex-row">

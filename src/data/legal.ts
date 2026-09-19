@@ -155,7 +155,7 @@ export const terms: LegalDoc = {
     {
       heading: '1. Who we are',
       blocks: [
-        `GharInspect provides home inspection services for new-possession and resale property in India. You can reach us at ${CONTACT} or ${PHONE}. Our address is ${ADDRESS}.`,
+        `GharInspect provides home inspection services for new-possession and resale property in Pune and Pimpri-Chinchwad. You can reach us at ${CONTACT} or ${PHONE}. Our address is ${ADDRESS}.`,
       ],
     },
     {

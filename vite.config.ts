@@ -5,9 +5,10 @@ import { faqs, plans } from './src/data/content.ts'
 
 const SITE = 'https://www.gharinspect.in'
 
-// Cities are taken from the testimonials on the page. Keep this list matching
-// where inspections are genuinely carried out.
-const AREA_SERVED = ['Pune', 'Mumbai', 'Thane', 'Bengaluru', 'Hyderabad', 'Delhi NCR']
+// Keep this matching where inspections are genuinely carried out. Displayed as
+// "Pune & PCMC" in copy; the schema uses Pimpri-Chinchwad, which is the place
+// name Google resolves.
+const AREA_SERVED = ['Pune', 'Pimpri-Chinchwad']
 
 const org = { '@id': `${SITE}/#organization` }
 const business = { '@id': `${SITE}/#business` }
@@ -30,7 +31,7 @@ function structuredData() {
         email: 'support@gharinspect.in',
         telephone: '+91-90219-07313',
         description:
-          'Professional home inspection services for new-possession and resale properties in India.',
+          'Professional home inspection services for new-possession and resale properties in Pune and Pimpri-Chinchwad.',
       },
       {
         '@type': 'WebSite',
